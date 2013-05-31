@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>694</width>
-    <height>711</height>
+    <width>716</width>
+    <height>730</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -196,13 +196,6 @@
           <item>
            <widget class="QComboBox" name="comboBox_2"/>
           </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="text">
-             <string>Find new skin</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
@@ -230,8 +223,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>694</width>
-     <height>20</height>
+     <width>716</width>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

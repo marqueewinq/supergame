@@ -161,8 +161,9 @@ void MainWindow::restoreSettings() {
 
     name = s->value("lastName").toString();
     skins = new QStringList;
-    *skins = s->value("skins").toStringList();
-    *skins << "default";
+    QFileInfoList tmp = QDir("../skins/").entryInfoList();
+    for (int i = 1; i < tmp.size(); i++)
+        *skins << tmp[i].baseName();
     skins->removeDuplicates();
     for (int i = 0; i < skins->size(); i++)
         ui->comboBox_2->addItem(skins->at(i));
@@ -184,7 +185,6 @@ void MainWindow::saveSettings() {
     for (int i = 0; i < 5; i++)
         s->setValue("recordName" + QString::number(i), QVariant(recordNames[i]));
 
-    s->setValue("skins", QVariant(*skins));
     s->setValue("defaultskin", ui->comboBox_2->currentIndex());
     s->setValue("lastName", QVariant(ui->lineEdit->text()));
     s->setValue("size", size());

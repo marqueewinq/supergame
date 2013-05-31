@@ -10,6 +10,7 @@
 #include <QRegExp>
 #include <QThread>
 #include <QMessageBox>
+#include <QDir>
 #include <unistd.h>
 
 
