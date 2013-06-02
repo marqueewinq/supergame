@@ -43,7 +43,7 @@ void PaintWidget::paintEvent(QPaintEvent *event)
         return;
     }
 
-    p.drawPixmap(0, 0, *wallpaper);
+    p.drawPixmap(0, 0, width(), height(), *wallpaper);
 
     p.drawPixmap(myx - 8, myy - 8, *pix);
 
